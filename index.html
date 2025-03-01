@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World News</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+        <img id="theme-image" src="./world news-logo/default-monochrome-black.svg" width="200px" />
+
+      <div class="inputSearch desktop">
+        <form id="searchForm">
+          <input type="text" id="searchInput" placeholder="Type to search..." />
+          <span> <i class="fa-solid fa-search"></i></span>
+        </form>
+      </div>
+
+      <nav class="desktop">
+        <ul>
+          <li onclick="Search('cricket')">Cricket</li>
+          <li onclick="Search('technology')">Tech</li>
+          <li onclick="Search('food')">Food</li>
+          <li onclick="Search('health')">Health</li>
+          <li onclick="Search('movies')">Movies</li>
+          <li onclick="Search('business')">Business</li>
+          <!---->
+          <li><!-- Light/Dark Mode Toggle -->
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="toggle-label">
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+           </li>
+        <!---->
+        </ul>
+        
+        
+      </nav>
+
+      <!-- Menu Button -->
+      <div class="menuBtn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile" id="mobileMenu">
+        <nav>
+          <ul>
+            <li onclick="Search('cricket')">Cricket</li>
+            <li onclick="Search('technology')">Tech</li>
+            <li onclick="Search('food')">Food</li>
+            <li onclick="Search('movies')">Movies</li>
+            <li onclick="Search('business')">Business</li>
+          </ul>
+        </nav>
+        <div class="inputSearch">
+          <form id="searchFormMobile">
+            <input type="text" id="searchInputMobile" placeholder="Type to search..." />
+            <span> <i class="fa-solid fa-search"></i></span>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main News Section -->
+    <main></main>
+
+    <!---->
+    <footer>
+      <div class="footer-content">
+          <div class="footer-section about">
+              <h3>Keeping you informed with the latest news from around the globe.</h3>
+          </div>
+          <div class="footer-section links">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+                  <li><a href="/terms">Terms of Service</a></li>
+                  <li><a href="/privacy">Privacy Policy</a></li>
+              </ul>
+          </div>
+          <div class="footer-section social">
+              <h3>Follow Us</h3>
+              <div class="socialicons">
+                <a href="https://facebook.com/worldnews" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/worldnews" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/worldnews" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/company/worldnews" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <!--<p>© 2025 World News. All rights reserved.</p> -->
+          <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+  </footer>
+    <!---->
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
