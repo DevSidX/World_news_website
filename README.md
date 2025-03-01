@@ -18,9 +18,3 @@ Welcome to **World News**, your go-to platform for the latest global news, break
 2. Browse through different news categories.  
 3. Use the search bar to find specific news topics.  
 4. Click on articles to read full stories.  
-
-## 🔧 Installation (for local setup)  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/world-news.git
-   cd world-news
