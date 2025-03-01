@@ -1,4 +1,3 @@
-# World_news_website
 # 🌍 World News Website  
 
 Welcome to **World News**, your go-to platform for the latest global news, breaking stories, and insightful articles across various categories. Stay informed with real-time updates from around the world.  
@@ -13,9 +12,6 @@ Welcome to **World News**, your go-to platform for the latest global news, break
 ## 🛠️ Tech Stack  
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap  
 - **API:** [GNews API](https://gnews.io/)  
-
-## 📸 Screenshots  
-(Add images or GIFs showcasing your website’s UI)  
 
 ## 💡 How to Use  
 1. Visit the website.  
