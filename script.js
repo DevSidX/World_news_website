@@ -1,26 +1,25 @@
-const API_KEY = "f93dc3e6fbd55456caca3780c0545398";  
-const url = "https://gnews.io/api/v4/search?q=";
-
 async function fetchData(query) {
-    try {
-        const res = await fetch(`${url}${encodeURIComponent(query)}&token=${API_KEY}`);
-        if (!res.ok) {
-            throw new Error(`HTTP error! Status: ${res.status}`);
-        }
-        const data = await res.json();
+  try {
+    const res = await fetch(`/api/news?q=${encodeURIComponent(query)}`);
 
-        if (!data.articles || data.articles.length === 0) {
-            console.log("No news articles found.");
-            document.querySelector("main").innerHTML = '<p>No news found.</p>';
-            return;
-        }
-
-        renderMain(data.articles);
-    } catch (error) {
-        console.error("Error fetching news:", error);
-        document.querySelector("main").innerHTML = '<p>Failed to load news.</p>';
+    if (!res.ok) {
+      throw new Error("Network error");
     }
+
+    const data = await res.json();
+
+    if (!data.articles || data.articles.length === 0) {
+      document.querySelector("main").innerHTML = "<p>No news found.</p>";
+      return;
+    }
+
+    renderMain(data.articles);
+  } catch (error) {
+    console.error("Error fetching news:", error);
+    document.querySelector("main").innerHTML = "<p>Failed to load news.</p>";
+  }
 }
+
 
 // Load default latest news
 fetchData("latest");
